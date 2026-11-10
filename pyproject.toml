@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "antseed"
+version = "0.1.0"
+description = "Demo Python SDK for the Antseed gateway API (P2P AI inference network)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Antseed SDK demo" }]
+keywords = ["antseed", "llm", "inference", "openai-compatible"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# Zero runtime dependencies: the transport is stdlib urllib only.
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/AntSeed/antseed"
+Documentation = "https://antseed.com/docs/gateway/api"
+
+[project.optional-dependencies]
+dev = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
